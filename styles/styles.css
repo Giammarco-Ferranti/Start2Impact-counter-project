@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5rem;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 5rem;
+  text-align: center;
+  color: black;
+}
+
+
+.btn {
+  background-color: rgba(255, 255, 255, .8);
+  border: none;
+  font-size: 3rem;
+  opacity: .9;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: .5;
+}
