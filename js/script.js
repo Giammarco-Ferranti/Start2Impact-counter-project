@@ -1,15 +1,31 @@
 
+
+//Creazione pulsanti e valore counter 
+
+
+let div = document.createElement('div');
+div.className = 'container';
+document.body.append(div);
+
+let buttonDecrease = document.createElement('button');
+buttonDecrease.className = 'btn decrease';
+buttonDecrease.innerHTML = '👈';
+div.append(buttonDecrease);
+
+let textValue = document.createElement('h1');
+textValue.id = 'value';
+textValue.innerHTML = '0';
+div.append(textValue);
+
+let buttonIncrease = document.createElement('button');
+buttonIncrease.className = 'btn increase';
+buttonIncrease.innerHTML = '👉';
+div.append(buttonIncrease);
+
+
+//counter
 let count = 0;
-const value = document.querySelector('#value');
-const btns = document.querySelectorAll('.btn');
-const off = document.querySelector('.left');
-const on = document.querySelector('.right');
-
-
-document.querySelector('#value').innerHTML = count;
-document.querySelector('.decrease').innerHTML = '👈';
-document.querySelector('.increase').innerHTML = '👉';
-
+const btns = [buttonDecrease, buttonIncrease];
 
 btns.forEach(function(btn){
 btn.addEventListener('click', function(e){
@@ -19,12 +35,14 @@ count--;
 } else if(styles.contains('increase')){
   count++;
 }
-value.textContent = count;
+textValue.textContent = count;
 });
 });
 
 
 //dark mode
+const off = document.querySelector('.left');
+const on = document.querySelector('.right');
 
 off.addEventListener('click', function(){
   let element = document.body;
